@@ -4,14 +4,14 @@ const App = () => {
   return (
     <section className="booklist">
       {books.map((book) => {
-        return <Book key={book.id} book={book} />
+        return <Book key={book.id} {...book} />
       })}
     </section>
   )
 }
 
 const Book = (props) => {
-  const { img, alt, title, author } = props.book;
+  const { img, alt, title, author } = props;
   return (
     <article className="book">
       <img src={img} alt={alt} />
